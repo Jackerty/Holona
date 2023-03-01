@@ -1,0 +1,6 @@
+[configuration]
+entry_symbol = "example_init"
+[libraries]
+linux.64="res://Lib/L_RPG.so"
+windows.x86_64="res://lib/L_RPG.dll"
+macos="res://lib/L_RPG..framework"
