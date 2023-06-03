@@ -1,0 +1,10 @@
+# Godot 4+ specific ignores
+.godot/
+Include
+*.kdev4
+.kdev4
+*.o
+*.os
+*.so
+*.import
+.sconsign.dblite

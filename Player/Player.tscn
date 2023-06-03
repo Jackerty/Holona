@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk3ss6f7mem0m"]
+
+[ext_resource type="Texture2D" uid="uid://fpfhl6ojdhoc" path="res://Player/FaceTexture.png" id="1_b8ox6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kac53"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_208uc"]
+albedo_texture = ExtResource("1_b8ox6")
+uv1_triplanar_sharpness = 0.0693481
+
+[sub_resource type="SphereMesh" id="SphereMesh_wowwc"]
+lightmap_size_hint = Vector2i(17, 9)
+material = SubResource("StandardMaterial3D_208uc")
+
+[node name="Player" type="MovementController"]
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+current = true
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_kac53")
+
+[node name="HeadMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+mesh = SubResource("SphereMesh_wowwc")
+skeleton = NodePath("../..")

@@ -1,6 +1,24 @@
 [configuration]
-entry_symbol = "example_init"
+entry_symbol = "godot_init"
+compatibility_minimum = 4.1
+
 [libraries]
-linux.64="res://Lib/L_RPG.so"
-windows.x86_64="res://lib/L_RPG.dll"
-macos="res://lib/L_RPG..framework"
+macos.debug = "res://Bin/Holona.framework"
+macos.release = "res://Bin/Holona.framework"
+windows.debug.x86_32 = "res://Bin/Holona.dll"
+windows.release.x86_32 = "res://Bin/Holona.dll"
+windows.debug.x86_64 = "res://Bin/Holona.dll"
+windows.release.x86_64 = "res://Bin/Holona.dll"
+linux.debug.x86_64 = "res://Bin/Holona.so"
+linux.release.x86_64 = "res://Bin/Holona.so"
+linux.debug.arm64 = "res://Bin/Holona.so"
+linux.release.arm64 = "res://Bin/Holona.so"
+linux.debug.rv64 = "res://Bin/Holona.so"
+linux.release.rv64 = "res://Bin/Holona.so"
+android.debug.x86_64 = ""
+android.release.x86_64 = ""
+android.debug.arm64 = ""
+android.release.arm64 = ""
+
+[icons]
+MovementController = "res://EditorIcons/MovementController.svg"
